@@ -1,6 +1,8 @@
 <template>
   <div class="container mt-5 box">
-    <h1 class="text-center text-primary">Quartet in <br> Wonderland</h1>
+    <h1 class="text-center text-primary">we're all <br> ADHD Here </h1>
+    <h2> the Game </h2>
+
 
     <div class="row button-row">
       <router-link to="/game" class="col-md-4">
@@ -10,7 +12,13 @@
 
     <div class="row button-row">
       <router-link to="/ebook" class="col-md-4">
-        <button class="learn-more" id="readbutton">Read</button>
+        <button class="learn-more" id="readbutton">Read Alice</button>
+      </router-link>
+    </div>
+
+    <div class="row button-row">
+      <router-link to="" class="col-md-4">
+        <button class="learn-more" id="readbutton" @click="openSettings">ADHD Info</button>
       </router-link>
     </div>
 
@@ -32,7 +40,7 @@ export default {
   methods: {
     openSettings() {
       // Implement opening settings (you can add this feature)
-      alert('Settings not implemented yet!');
+      alert('Not implemented yet!');
     },
   },
 };
@@ -70,51 +78,36 @@ body {
   margin-top: 2em;
 }
 
-.learn-more {
-  font-weight: 600;
-  color: #382b22;
-  text-transform: uppercase;
-  padding: 1em 2em;
-  background: #fff0f0;
-  border: 2px solid #b18597;
-  border-radius: 8px;
-  transform-style: preserve-3d;
-  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
-  position: relative;
+#settingsbutton {
+  display: none;
 }
 
-.learn-more::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #f9c4d2;
-  border-radius: inherit;
-  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
-  transform: translate3d(0, 0.75em, -1em);
-  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+h1 {
+  font-size: 12vw;
 }
 
-.learn-more:hover {
-  background: #ffe9e9;
-  transform: translate(0, 0.25em);
+#gamebutton {
+  padding: 10px 20px;
+  font-size: 50px;
+  background-color: #1088eb; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;  
+  font-family: 'Rowdies', sans-serif;
 }
 
-.learn-more:hover::before {
-  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
-  transform: translate3d(0, 0.5em, -1em);
-}
-
-.learn-more:active {
-  background: #ffe9e9;
-  transform: translate(0em, 0.75em);
-}
-
-.learn-more:active::before {
-  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-  transform: translate3d(0, 0, -1em);
+#readbutton {
+  padding: 10px 20px;
+  font-size: 50px;
+  background-color: #1088eb; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;  
+  font-family: 'Rowdies', sans-serif;
 }
 
 #settingsbutton {
@@ -122,50 +115,6 @@ body {
   height: 10vw;
 }
 
-button:hover {
-  background-color: #1565C0;
-}
-
-.button-row button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em 2em; /* Adjust padding as needed */
-}
-
-.button-row button .learn-more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  color: #382b22;
-  text-transform: uppercase;
-  background: #fff0f0;
-  border: 2px solid #b18597;
-  border-radius: 8px;
-  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
-    background 150ms cubic-bezier(0, 0, 0.58, 1);
-}
-
-.button-row button:hover .learn-more {
-  background: #ffe9e9;
-  transform: translate(0, 0.25em);
-}
-
-.button-row button:hover .learn-more::before {
-  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
-  transform: translate3d(0, 0.5em, -1em);
-}
-
-.button-row button:active .learn-more {
-  background: #ffe9e9;
-  transform: translate(0em, 0.75em);
-}
-
-.button-row button:active .learn-more::before {
-  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-  transform: translate3d(0, 0, -1em);
-}
 
 #settingsbutton {
   width: 10vw;
