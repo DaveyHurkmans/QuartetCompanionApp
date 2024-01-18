@@ -143,13 +143,17 @@ button {
 
 #ebook-content {
   padding: auto;
-  margin: auto;
+  margin: 5vw;
+  text-align: left;
 }
 
 h2 {
   color: #2196F3;
   padding: auto;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
   margin: auto;
+  text-align: center;
 }
 
 p {
